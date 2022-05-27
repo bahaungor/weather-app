@@ -1,1 +1,3 @@
-let a = document.querySelector(".deneme")
+import { getForecast } from "./get-forecast";
+
+getForecast()
