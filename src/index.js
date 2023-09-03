@@ -1,3 +1,3 @@
-import { getForecast } from "./get-forecast";
+import './style.css'
 
-getForecast()
+console.log('Deneme')
