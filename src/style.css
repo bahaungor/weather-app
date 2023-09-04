@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+:root.dark {
+    --border: 1px solid whitesmoke;
+    --bg: rgb(0, 0, 0);
+    --bg2: rgb(29, 29, 29);
+    --bg3: rgb(39, 39, 39);
+    --text: white;
+    --lightgray: #f0eef1;
+    --green: rgb(105, 247, 105);
+    --red: rgb(255, 118, 118);
+    --navy: rgb(21, 101, 192);
+    --blue: rgb(33, 150, 243);
+    --navyToBlue: linear-gradient(to right, var(--navy), var(--blue));
+    --shadow: 0px 2px 2px lightgray;
+    --gray: rgb(94, 94, 94);
+    --font: 'Jost', sans-serif;
+}
+
+:root {
+    --border: 1px solid black;
+    --bg: rgb(255, 255, 255);
+    --bg2: rgb(250, 250, 250);
+    --bg3: rgb(245, 245, 245);
+    --text: black;
+    --lightgray: #f0eef1;
+    --green: rgb(105, 247, 105);
+    --red: rgb(255, 118, 118);
+    --navy: rgb(21, 101, 192);
+    --blue: rgb(33, 150, 243);
+    --navyToBlue: linear-gradient(to right, var(--navy), var(--blue));
+    --shadow: 0px 2px 2px lightgray;
+    --gray: rgb(94, 94, 94);
+    --font: 'Jost', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input, textarea, select, button, meter, progress{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none; /* Remove default focus outline */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: transparent; /* Reset background color */
+    font-family: inherit; /* Inherit font from parent */
+}
+  
+/* Reset button and submit input styles */
+button, input[type="submit"], input[type="button"] {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Reset checkbox and radio input styles */
+input[type="checkbox"], input[type="radio"] {
+    vertical-align: middle; /* Align the input with label text */
+}
+
+/* Reset select element styles */
+select {
+    appearance: none; /* Remove default dropdown arrow on Chrome */
+    background-image: none; /* Remove default background image */
+}
+
+/* Reset textarea styles */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Make labels & forms & buttons & inputs block-level elements */
+label, form, button, input{
+    display: block;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    font-family: var(--font);
+    border-bottom: var(--border);
+    background-color: var(--bg2);
+}
+
+.header {
+    font-weight: 900;
+}
+
+header img {
+    width: 50px;
+}
+
+.tt {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+main > form {
+
+}
+
+main > form > input{
+    border: var(--border);
+    border-radius: 7px;
+    padding: 3px;
+}
+
+footer {
+    border-top: var(--border);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: var(--bg2);
+}

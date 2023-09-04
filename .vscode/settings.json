@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+    "editor.formatOnSave": true,
+    "[css]": { /*Ignore certain files on save*/
+        "editor.formatOnSave": false
+    },
+}
