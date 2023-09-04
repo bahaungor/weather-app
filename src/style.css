@@ -79,6 +79,7 @@ label, form, button, input{
     display: block;
 }
 
+
 body {
     font-family: var(--font);
     background-color: var(--bg);
@@ -125,9 +126,23 @@ main {
 
 main > form {
 
+    
 }
 
-main > form > input{
+form > div{
+    display: flex;
+    gap: 10px;
+}
+
+form > div > button{
+    background-color: var(--bg3);
+    padding: 7px 20px;
+    border-radius: 8px;
+    border: var(--border);
+    color: var(--text);
+}
+
+main input{
     border: var(--border);
     border-radius: 7px;
     padding: 3px;
