@@ -5,4 +5,7 @@ import { setTheme } from './themeUtils'; // Thank you ES6 Modules!
 document.querySelector('.tt').addEventListener('click', setTheme)
 
 
-getWeatherData('serdivan').then((data) => console.log(data))
+getWeatherData('serdivan').then((data) => {
+    console.log(data)
+
+})
