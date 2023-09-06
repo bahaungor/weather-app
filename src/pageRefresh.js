@@ -26,7 +26,7 @@ function updatePage(e) {
     e.preventDefault()
     getWeatherData(convertTurkishToEnglish(input.value)).then((data) => {
         if (data.error) {
-            document.querySelector('.cards').innerHTML = 'Please enter correct location'
+            document.querySelector('.cards').innerHTML = data.error.message
             return
         }
         document.querySelector('.cards').innerHTML = ''
