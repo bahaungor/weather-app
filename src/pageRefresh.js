@@ -3,10 +3,32 @@ import { getWeatherData } from './getWeather'
 const input = document.querySelector('form > div > input')
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+function convertTurkishToEnglish(inputString) {
+    const turkishToEnglishMap = {
+        'ş': 's',
+        'Ş': 'S',
+        'ı': 'i',
+        'İ': 'I',
+        'ğ': 'g',
+        'Ğ': 'G',
+        'ç': 'c',
+        'Ç': 'C',
+        'ü': 'u',
+        'Ü': 'U',
+        'ö': 'o',
+        'Ö': 'O',
+    };
+
+    return inputString.replace(/[şŞıİğĞçÇüÜöÖ]/g, match => turkishToEnglishMap[match] || match);
+}
+
 function updatePage(e) {
     e.preventDefault()
-    getWeatherData(input.value).then((data) => {
-        console.log(data)
+    getWeatherData(convertTurkishToEnglish(input.value)).then((data) => {
+        if (data.error) {
+            document.querySelector('.cards').innerHTML = 'Please enter correct location'
+            return
+        }
         document.querySelector('.cards').innerHTML = ''
         for (let i = 0; i < 5; i++) {
             const card = document.createElement('div')
