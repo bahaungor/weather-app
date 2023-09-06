@@ -120,7 +120,6 @@ main {
     flex: 1;
     padding: 20px;
     display: flex;
-    align-items: center ;
     flex-direction: column;
     font-size: 1.5rem;
     gap: 25px;
@@ -135,7 +134,9 @@ main > form {
 
 form > div{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 form > div > button{
@@ -154,19 +155,22 @@ main input{
 
 .cards{
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    font-size: 1.3rem
+    flex-wrap: wrap;
+    grid-gap: 1rem;
+    font-size: 1.3rem;
 }
 
 .card{
+    flex: 1;
     background-color: var(--bg3);
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3px;
+    min-width: 250px;
+    max-width: 300px;
 }
 
 footer {
