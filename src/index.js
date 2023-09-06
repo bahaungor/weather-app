@@ -1,3 +1,9 @@
-import { getForecast } from "./get-forecast";
+import './style.css'
+import { updatePage } from './pageRefresh';
+import { setTheme } from './themeUtils'; // Thank you ES6 Modules!
 
-getForecast()
+document.querySelector('.tt').addEventListener('click', setTheme)
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', updatePage)
